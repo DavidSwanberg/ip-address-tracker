@@ -3,7 +3,11 @@ module.exports = {
   purge: ['index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+       'hero-pattern': "url('/pattern-bg.png')",
+      },
+    },
   },
   variants: {
     extend: {},
