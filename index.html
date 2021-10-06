@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -13,33 +13,33 @@
   <title>Frontend Mentor | IP Address Tracker</title>
 </head>
 <body class="h-screen text-center">
-  <div class="relative pt-5 bg-cover h-1/3 md:pt-16 md:h-80 bg-hero-pattern">
-    <h1 class="my-3 text-3xl font-bold text-white md:text-4xl">IP Address Tracker</h1>
-    <div class="flex">
-      <form class="justify-center p-0 m-auto sm:my-3 md:w-96" id="form">
-        <input type="text" placeholder="Search for any IP address or domain" id="input" class="w-4/5 p-2 m-0 rounded-l-md">
-        <input type="submit" value=">" class="p-2 m-0 text-white transform -translate-x-1 bg-black rounded-r-md hover:text-blue-500">
+  <div class="relative pt-5 bg-cover h-1/3 md:pt-12 md:h-80 bg-hero-pattern">
+    <h1 class="my-3 mb-12 text-3xl font-bold text-white md:mb-3 md:text-4xl">IP Address Tracker</h1>
+    <div class="flex justify-center">
+      <form class="w-11/12 p-0 px-3 text-xl sm:my-3 md:w-2/5" id="form">
+        <input type="text" placeholder="Search for any IP address or domain" id="input" class="w-4/5 px-2 py-4 m-0 rounded-l-lg">
+        <input type="submit" value=">" class="px-4 py-4 m-0 font-bold text-white transform -translate-x-1 bg-black rounded-r-lg hover:bg-gray-700">
       </form>
     </div>
   </div>
 
   <div class="absolute z-10 flex w-full px-2 -mt-20">
-    <div class="self-center w-5/6 px-8 py-5 mx-auto bg-white rounded-md md:w-max sm:py-10 md:py-16 md:flex md:space-x-9 drop-shadow-lg">
-      <div>
-        <div class="text-sm uppercase">IP Address</div>
-        <div class="text-xl font-bold" id="ip-address"></div>
+    <div class="w-5/6 px-5 py-5 mx-auto space-y-6 break-words bg-white divide-gray-300 rounded-lg lg:px-0 lg:space-y-0 lg:text-left lg:divide-x md:w-1/2 lg:w-4/5 sm:py-10 lg:py-10 lg:flex drop-shadow-lg">
+      <div class="lg:w-1/4 lg:px-5">
+        <div class="text-sm font-semibold tracking-widest text-gray-500 uppercase">IP Address</div>
+        <div class="text-xl font-bold md:text-2xl" id="ip-address"></div>
       </div>
-      <div>
-        <div class="text-sm uppercase">Location</div>
-        <div class="text-xl font-bold" id="location"></div>
+      <div class="lg:w-1/4 lg:px-5">
+        <div class="text-sm font-semibold tracking-widest text-gray-500 uppercase">Location</div>
+        <div class="text-xl font-bold md:text-2xl" id="location"></div>
       </div>
-      <div>
-        <div class="text-sm uppercase">Timezone</div>
-        <div class="text-xl font-bold" id="timezone"></div>
+      <div class="lg:w-1/4 lg:px-5">
+        <div class="text-sm font-semibold tracking-widest text-gray-500 uppercase">Timezone</div>
+        <div class="text-xl font-bold md:text-2xl" id="timezone"></div>
       </div>
-      <div>
-        <div class="text-sm uppercase">ISP</div>
-        <div class="text-xl font-bold" id="isp"></div>
+      <div class="lg:w-1/4 lg:px-5">
+        <div class="text-sm font-semibold tracking-widest text-gray-500 uppercase">ISP</div>
+        <div class="text-xl font-bold md:text-2xl" id="isp"></div>
       </div>
     </div>
   </div>
