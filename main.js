@@ -2,6 +2,11 @@ import './style.css'
 
 const mymap = L.map('mapid')
 
+const myIcon = L.icon({
+  iconUrl: '/images/icon-location.svg',
+  iconSize: [50, 65],
+});
+
 const setMap =(data)=>{
    mymap.setView([data.location.lat, data.location.lng], 13);
 
@@ -14,7 +19,7 @@ const setMap =(data)=>{
       accessToken: 'pk.eyJ1IjoiZGF2aWRzd2FuYmVyZyIsImEiOiJja3RkNXJtZ3YyY2M5MndxbjIxanVtOGl2In0.O7NFEkwmWF2gnTPcxvEcqw'
   }).addTo(mymap);
 
-  L.marker([data.location.lat, data.location.lng]).addTo(mymap);
+  L.marker([data.location.lat, data.location.lng], {icon: myIcon}).addTo(mymap);
 
 }
 
