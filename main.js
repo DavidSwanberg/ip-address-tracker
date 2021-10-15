@@ -1,6 +1,6 @@
-import './style.css'
+import './style.css';
 
-const mymap = L.map('mapid')
+const mymap = L.map('mapid');
 
 const myIcon = L.icon({
   iconUrl: '/images/icon-location.svg',
@@ -8,15 +8,15 @@ const myIcon = L.icon({
 });
 
 const setMap =(data)=>{
-   mymap.setView([data.location.lat, data.location.lng], 13);
+  mymap.setView([data.location.lat, data.location.lng], 17);
 
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      maxZoom: 18,
-      id: 'mapbox/streets-v11',
-      tileSize: 512,
-      zoomOffset: -1,
-      accessToken: 'pk.eyJ1IjoiZGF2aWRzd2FuYmVyZyIsImEiOiJja3RkNXJtZ3YyY2M5MndxbjIxanVtOGl2In0.O7NFEkwmWF2gnTPcxvEcqw'
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoiZGF2aWRzd2FuYmVyZyIsImEiOiJja3RkNXJtZ3YyY2M5MndxbjIxanVtOGl2In0.O7NFEkwmWF2gnTPcxvEcqw'
   }).addTo(mymap);
 
   L.marker([data.location.lat, data.location.lng], {icon: myIcon}).addTo(mymap);
@@ -49,15 +49,15 @@ const getData =(ip)=>{
   };
 
 
-  const handleSubmit =(event)=> {
-    event.preventDefault();
-    const input = document.getElementById('input').value;
-    console.log('input', input)
-    getData(input)
-  }
+const handleSubmit =(event)=> {
+  event.preventDefault();
+  const input = document.getElementById('input').value;
+  console.log('input', input)
+  getData(input)
+};
 
 
-  const form = document.getElementById('form');
-  form.addEventListener('submit', handleSubmit);
+const form = document.getElementById('form');
+form.addEventListener('submit', handleSubmit);
 
-  getData('');
+getData('');
