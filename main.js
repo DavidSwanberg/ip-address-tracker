@@ -7,7 +7,7 @@ const myIcon = L.icon({
   iconSize: [50, 65],
 });
 
-const setMap =(data)=>{
+const setMap = (data) => {
   mymap.setView([data.location.lat, data.location.lng], 17);
 
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -23,22 +23,22 @@ const setMap =(data)=>{
 
 }
 
-const setInfo =(info)=> {
+const setInfo = (info) => {
   document.getElementById("ip-address").textContent=`${info.ip}`;
   document.getElementById("location").textContent=`${info.location.city}, ${info.location.region} ${info.location.postalCode}`;
   document.getElementById("timezone").textContent=`${info.location.timezone}`;
   document.getElementById("isp").textContent=`${info.isp}`;
 }
 
-const getData =(ip)=>{
+const getData =(ip)=> {
   const api_key = "at_Sshnj6Ixj0r4TjUCpwRxrRkqoBBDi";
   const api_url = "https://geo.ipify.org/api/v1?";
   const url = api_url + 'apiKey=' + api_key + '&ipAddress=' + ip
   fetch(url)
-    .then((response)=> {
+    .then((response) => {
       return response.json();
     })
-    .then((json)=>{
+    .then((json) => {
       console.log("json", json);
       setInfo(json)
       setMap(json)
@@ -49,7 +49,7 @@ const getData =(ip)=>{
   };
 
 
-const handleSubmit =(event)=> {
+const handleSubmit = (event) => {
   event.preventDefault();
   const input = document.getElementById('input').value;
   console.log('input', input)
