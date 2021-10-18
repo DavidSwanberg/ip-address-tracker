@@ -30,7 +30,7 @@ const setInfo = (info) => {
   document.getElementById("isp").textContent=`${info.isp}`;
 }
 
-const getData =(ip)=> {
+const getData = (ip) => {
   const api_key = "at_Sshnj6Ixj0r4TjUCpwRxrRkqoBBDi";
   const api_url = "https://geo.ipify.org/api/v1?";
   const url = api_url + 'apiKey=' + api_key + '&ipAddress=' + ip
@@ -39,7 +39,6 @@ const getData =(ip)=> {
       return response.json();
     })
     .then((json) => {
-      console.log("json", json);
       setInfo(json)
       setMap(json)
     })
@@ -52,7 +51,6 @@ const getData =(ip)=> {
 const handleSubmit = (event) => {
   event.preventDefault();
   const input = document.getElementById('input').value;
-  console.log('input', input)
   getData(input)
 };
 
