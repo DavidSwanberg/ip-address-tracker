@@ -21,14 +21,14 @@ const setMap = (data) => {
 
   L.marker([data.location.lat, data.location.lng], {icon: myIcon}).addTo(mymap);
 
-}
+};
 
 const setInfo = (info) => {
   document.getElementById("ip-address").textContent=`${info.ip}`;
   document.getElementById("location").textContent=`${info.location.city}, ${info.location.region} ${info.location.postalCode}`;
   document.getElementById("timezone").textContent=`${info.location.timezone}`;
   document.getElementById("isp").textContent=`${info.isp}`;
-}
+};
 
 const getData = (ip) => {
   const api_key = "at_Sshnj6Ixj0r4TjUCpwRxrRkqoBBDi";
