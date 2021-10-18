@@ -46,7 +46,7 @@ const getData =(ip)=> {
     .catch(function (err) {
       console.warn('error', err);
     });
-  };
+};
 
 
 const handleSubmit = (event) => {
